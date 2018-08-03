@@ -16,6 +16,10 @@ describe OFX::Account do
       @account.bank_id.should == "0356"
     end
 
+    it "should return branch id" do
+      @account.branch_id.should == "3333-3"
+    end
+
     it "should return id" do
       @account.id.should == "03227113109"
     end
