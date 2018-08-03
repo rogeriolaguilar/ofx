@@ -5,7 +5,9 @@
 
 A simple OFX (Open Financial Exchange) parser built on top of Nokogiri. Currently supports both OFX 1.0.2 and 2.1.1.
 
-Works on both ruby 1.9 and 2.0.
+Forked from http://github.com/annacruz/ofx
+
+Tested with Ruby 2.5.1.
 
 == Usage
 
@@ -18,14 +20,6 @@ Works on both ruby 1.9 and 2.0.
   end
 
 Invalid files will raise an OFX::UnsupportedFileError.
-
-== Creator
-
-* Nando Vieira - http://simplesideias.com.br
-
-== Maintainer
-
-* Anna Cruz - http://anna-cruz.com
 
 == License
 
