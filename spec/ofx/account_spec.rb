@@ -93,6 +93,16 @@ describe OFX::Account do
       end
     end
 
+    context "Savings account" do # Bradesco do not provide a valid date in balance
+      before do
+        @account = OFX::Parser::Base.new("spec/fixtures/poupanca_bb.ofx").parser.account
+      end
+
+      it "should return nil for date balance" do
+        @account.type.should == :savings
+      end
+    end
+
     context "Invalid Dates" do
       before do
         @ofx = OFX::Parser::Base.new("spec/fixtures/bradesco.ofx")
